@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 import os
 from openai import OpenAI
 import openai
-# --- Load environment variables ---
 load_dotenv()
 AIRTABLE_API_KEY = os.getenv("AIRTABLE_API_KEY")
 AIRTABLE_BASE_ID = os.getenv("AIRTABLE_BASE_ID")
@@ -14,7 +13,6 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 TABLE_NAME = "Mapped Output"
 SKU_TABLE_NAME = "SKU Mapping"
 
-# --- Airtable client ---
 api = Api(AIRTABLE_API_KEY)
 mapped_output_table = api.table(AIRTABLE_BASE_ID, TABLE_NAME)
 sku_table = api.table(AIRTABLE_BASE_ID, SKU_TABLE_NAME)
